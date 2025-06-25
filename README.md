@@ -2,18 +2,11 @@
 
 I'm learning about MCP with the new streamable HTTP transport. This is just a very small, quick and dirty example of MCP client-server communication using streamable-http as the transport. I'm actually learning about all of this and there are tons of concepts which require spending more time reading. Anyway, there aren't many simple examples out there, this one is for myself and for whoever might find it useful.
 
+## Requirements
+
+This requires using OpenAI models so you need the `OPENAI_API_KEY` environment variable set.
+
 ## Instructions
-
-### Initial setup before coding
-
-```
-$ uv venv
-$ source .venv/bin/activate
-$ uv init
-$ uv add ...
-```
-
-### Setup after coding
 
 ```
 $ uv venv
@@ -61,7 +54,7 @@ This is in spanish right now, the idea is that you can ask about the current wea
   "province": "Mendoza",
   "weather": {
     "description": "Cubierto con neblina"
-  },
+  }
 }
 ```
 
@@ -71,13 +64,10 @@ $ uv run client.py
 ---Cliente MCP---
 Pregunta por el clima en una ciudad. Escribi exit para salir.
 
-Query: Cómo está el tiempo en Neuquén?
+Query: how's the weather in Mendoza?
 
-El cielo está nublado y hay llovizna.
+Weather in Mendoza is cloudy
 
-Query: Cómo está el tiempo en Villa La Angostura?
-
-El cielo está cubierto y hay precipitaciones de lluvia.
 ```
 
 
